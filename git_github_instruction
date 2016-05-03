@@ -1,0 +1,32 @@
+# set up github
+
+
+#steps:
+1, open git bash
+2, cd
+   mkdir huang	
+   cd mkdir
+   git init 
+   touch readme
+   git add readme
+   git commit -m 'first commit'
+   git remote add origin git@github.com:dlhuang/huang.git
+   git push -u origin master
+
+## question£º
+created a new repo, cloned it, added files to the directory, added them with add -A, committed changes, 
+and when I try to push using git push <repo name> master I get "Updates were rejected because the remote contains work that you do not have".
+
+This happens if you initialized a new github repo with README and/or LICENSE file
+git remote add origin [//your github url]
+//pull those changes
+git pull origin master
+//now, push your work to your new repo
+git push origin master
+Now you will be able to push your repository to github. Basically, you have to merge those new initialized files with your work. git pull fetches and merges for you. You can also fetch and merge if that suits you.
+
+
+If you confirm that your new code is all fine you can use:
+
+git push -f origin master.
+Where -f stands for "force commit".
